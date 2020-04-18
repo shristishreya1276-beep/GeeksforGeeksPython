@@ -65,7 +65,13 @@ b = ar[2:len(ar)]
 print(*b, end = " ")
 print(*a)
 
-Q. Python program to interchange first and last elements in a list
-Sol. 
+Q. Python program to convert time from 12 hour to 24 hour format
+Sol. from datetime import datetime
+a = input()
+one = datetime.strptime(a, "%I:%M:%S %p")
+two = datetime.strftime(one, "%H:%M:%S")
+print(two)
+
+Q. 
 
 
