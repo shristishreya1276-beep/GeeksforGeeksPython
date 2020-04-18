@@ -1,0 +1,71 @@
+Q. Python Program for n-th Fibonacci number
+Sol. n = int(input())
+def FebonacciNumber(n):
+    a = 0
+    b = 1
+    if n < 0:
+        return "Enter a valid number"
+    elif n == 0:
+        return a
+    elif n == 1:
+        return b
+    else:
+        for i in range(2, n):
+            c = a + b
+            a = b 
+            b = c 
+        return b 
+        
+print(FebonacciNumber(n))
+
+Q. Python Program for How to check if a given number is Fibonacci number?
+Sol. n = int(input())
+a = 5*(n**2) + 4
+c = 5*(n**2) - 4
+b = len([i for i in range(1,a) if i**2 == a])
+d = len([i for i in range(1,c) if i**2 == c])
+if (b != 0 or d != 0):
+    print("Yes")
+else:
+    print("No")
+    
+Q. Python Program to find sum of array
+Sol. a = list(map(int, input().split()))
+print(sum(a))
+
+Q. Python Program to find largest element in an array
+Sol. a = list(map(int, input().split()))
+print(max(a))
+
+Q. Python Program to check if given array is Monotonic
+Sol. ar = list(map(int, input().split()))
+def monotonic(ar):
+    return all(ar[i] <= ar[i+1] for i in range(0, len(ar) -1)) or all(ar[i] >= ar[i+1] for i in range(0, len(ar) -1))
+print(monotonic(ar))
+
+Q. Reconstruct the array by replacing arr[i] with (arr[i-1]+1) % M
+Sol. ar = list(map(int, input().split()))
+M = int(input())
+for i in range(1, len(ar)):
+    ar[i] = ((ar[i-1] + 1)%M)
+print(*ar)
+
+Q. Python Program for Find remainder of array multiplication divided by n
+Sol. ar = list(map(int, input().split()))
+M = int(input())
+result = 1 
+for i in ar:
+    result *= i
+print(result%M) 
+
+Q. Python Program to Split the array and add the first part to the end
+Sol. ar = list(map(int, input().split()))
+a = ar[0:2]
+b = ar[2:len(ar)]
+print(*b, end = " ")
+print(*a)
+
+Q. Python program to interchange first and last elements in a list
+Sol. 
+
+
