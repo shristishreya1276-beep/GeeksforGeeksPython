@@ -114,4 +114,30 @@ b = a.split(" ")
 for i in b:
     if len(i)%2 == 0:
         print(i)
-Q. 
+Q. Python | Program to accept the strings which contains all vowels
+Sol. a = str(input())
+b = ['a', 'e', 'i', 'o', 'u']
+c = set([i for i in a.lower()])
+d = [j for j in c]
+result = all(k in d for k in b)
+if result:
+    print("Accepted")
+else:
+    print("Not Accepted")
+    
+Q. Python | Count the Number of matching characters in a pair of string
+Sol. a = str(input())
+b = str(input())
+c = set([i for i in a])
+d = set([j for j in b])
+e = [k for k in c if k in d]
+print(len(e))
+
+Q. Python program to count number of vowels using sets in given string
+Sol. a = str(input())
+b = [i for i in a.lower()]
+c = ['a', 'e', 'i', 'o', 'u']
+print(len([i for i in b if i in c]))
+
+Q. Remove all duplicates from a given string in Python
+Sol. 
