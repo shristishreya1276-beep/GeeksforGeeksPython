@@ -140,4 +140,72 @@ c = ['a', 'e', 'i', 'o', 'u']
 print(len([i for i in b if i in c]))
 
 Q. Remove all duplicates from a given string in Python
-Sol. 
+Sol. from collections import OrderedDict
+a = str(input())
+print(''.join(OrderedDict.fromkeys(a)))
+
+Q. Program to check if a string contains any special character
+Sol. import re
+a = str(input())
+c = re.findall(r'[@_!#$%^&*()<>?/\|}{~:]', a)
+if len(c) != 0:
+    print("String is not accepted.")
+else:
+    print("String is accepted")
+    
+Q. Find words which are greater than given length k
+Sol. a = str(input())
+k = int(input("Enter: "))
+b = a.split(" ")
+c = [i for i in b if len(i) > k]
+print(*c)
+
+Q. Python program to split and join a string
+Sol. a = str(input())
+print('-'.join(a.split(' ')))
+
+Q. Python | Check if a given string is binary string or not
+Sol. a = str(input())
+b = list(set(a))
+result = all(i == '1' or i == '0' for i in b)
+if result:
+    print("Yes")
+else:
+    print("No")
+    
+Q. Python program to find uncommon words from two Strings
+Sol. a = str(input())
+b = str(input())
+c = list(set(a.split(" ")))
+d = list(set(b.split(" ")))
+print(list(set([i for i in c if i not in d] + [i for i in d if i not in c])))
+
+Q. Python | Swap commas and dots in a String
+Sol. a = str(input())
+a = a.replace(',', 'x')
+a = a.replace('.', ',')
+a = a.replace('x', '.')
+print(a)
+
+Q. Python | Permutation of a given string using inbuilt function
+Sol. from itertools import permutations
+a = str(input())
+per = permutations(a)
+for i in list(per):
+    print(*i)
+    
+Q. Python | Execute a String of Code in Python
+Sol. a = str(input())
+exec(a)
+
+Q. String slicing in Python to rotate a string
+Sol. a = str(input())
+k = int(input())
+print(a[k:len(a)-1] + a[0:k])
+print(a[len(a) -2 : len(a)] + a[0:len(a) - 2])
+
+Q. Python Counter| Find all duplicate characters in string
+Sol. a = str(input())
+print(*list(set([str(a[i]) for i in range(0, len(a)) if a.count(a[i]) != 1])))
+
+Q. 
