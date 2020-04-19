@@ -72,6 +72,46 @@ one = datetime.strptime(a, "%I:%M:%S %p")
 two = datetime.strftime(one, "%H:%M:%S")
 print(two)
 
+Q. Python program to check if a string is palindrome or not
+Sol. a = str(input())
+b = [str(a[i]) for i in range(0, len(a))]
+c = b[::-1]
+if b == c:
+    print("Yes")
+else:
+    print("No")
+    
+Q. Reverse words in a given String in Python
+Sol. a = str(input( ))
+print(" ".join(a.split(" ")[::-1]))
+
+Q. Ways to remove i’th character from string in Python
+Sol. a = str(input())
+i = int(input())
+if i == 0:
+    print(a[1:len(a)])
+elif i == len(a):
+    print(a[0:len(a) -1])
+else:
+    print(a[0:i] + a[i+1 : len(a)])
+
+Q. Python | Check if a Substring is Present in a Given String
+Sol. a = str(input())
+b = str(input())
+c = a.split(' ')
+if b in c:
+    print("yes")
+else:
+    print("No")
+    
+Q. Find length of a string in python
+Sol. a = str(input())
+print(len(a))
+
+Q. Python program to print even length words in a string
+Sol. a = str(input())
+b = a.split(" ")
+for i in b:
+    if len(i)%2 == 0:
+        print(i)
 Q. 
-
-
