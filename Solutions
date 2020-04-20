@@ -208,4 +208,106 @@ Q. Python Counter| Find all duplicate characters in string
 Sol. a = str(input())
 print(*list(set([str(a[i]) for i in range(0, len(a)) if a.count(a[i]) != 1])))
 
+Q. Python program to find smallest number in a list
+Sol. A = list(map(int, input().split()))
+print(min(A))
+
+Q. Python program to find largest number in a list
+Sol. A = list(map(int, input().split()))
+print(max(A))
+
+Q. Python program to find second largest number in a list
+Sol. A = list(map(int, input().split()))
+a = list(set(A))
+a.sort()
+a.pop(len(a)-1)
+print(max(a))
+
+Q. Python program to find N largest elements from a list
+Sol.A = list(map(int, input().split()))
+k = int(input("Enter: "))
+a = list(set(A))
+a.sort()
+print((a[len(a)- k:len(a)])[::-1])
+
+Q. Python program to print even numbers in a list
+Sol. A = list(map(int, input().split()))
+print([i for i in A if i%2 == 0])
+
+Q. Python program to print odd numbers in a List
+Sol. A = list(map(int, input().split()))
+print([i for i in A if i%2 != 0])
+
+Q. Python program to print all even numbers in a range
+Sol. a = int(input())
+b = int(input())
+print(*[i for i in range(a, b+1) if i%2 == 0])
+
+Q. Python program to print all odd numbers in a range
+Sol. a = int(input())
+b = int(input())
+print(*[i for i in range(a, b+1) if i%2 != 0])
+
+Q. Python program to count Even and Odd numbers in a List
+Sol. a = list(map(int, input().split()))
+print("Even = " + str(len([i for i in a if i%2 == 0])))
+print("Odd = " +str(len([i for i in a if i%2 != 0])))
+
+Q. Python program to print positive numbers in a list
+Sol.  a = list(map(int, input().split()))
+print(*[i for i in a if i > 0])
+
+Q. Python | Remove empty tuples from a list
+Sol. a = list(map(int, input().split()))
+print([i for i in a if len(i) != 0]
+
+Q. Python | Program to print duplicates from a list of integers
+Sol. a =  list(map(int, input().split()))
+print(list(set([i for i in a if a.count(i) > 1])))
+
+Q. Python program to find Cumulative sum of a list
+Sol. from itertools import accumulate
+a =  list(map(int, input().split()))
+print(list(accumulate(a)))
+
+Q. Python | Sort the values of first list using second list
+Sol. a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = zip(b,a)
+print([i for _,i in sorted(c)])
+
+Q. Python | Count occurrences of an element in a list
+Sol. lst = list(map(int, input().split()))
+a = int(input("Enter: "))
+print(lst.count(a))
+
+Q. Python program to interchange first and last elements in a list
+Sol. lst = list(map(int, input().split()))
+a = lst[1:-1]
+b = lst[-1]
+c = lst[0]
+a.insert(0,b)
+a.insert(len(lst),c)
+print(a)
+
+Q. Python program to swap two elements in a list
+Sol. lst = list(map(int, input().split()))
+i = int(input())
+j = int(input())
+temp = lst[i-1]
+lst[i-1] = lst[j-1]
+lst[j-1] = temp
+print(lst)
+
+Q. Python | Check if binary representation is palindrome
+Sol. a = int(input())
+b = bin(a)[2:]
+c = [i for i in b]
+d = c[::-1]
+if c == d:
+    print("Yes")
+else:
+    print("No.")
+    
 Q. 
+
