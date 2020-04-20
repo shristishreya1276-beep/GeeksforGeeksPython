@@ -309,5 +309,45 @@ if c == d:
 else:
     print("No.")
     
+Q. Python Program for Largest K digit number divisible by X
+Sol. a = 9
+b = str(a)
+k = int(input())
+x = int(input())
+c = b*k
+e = int(c)
+d = max([i for i in range(0,e) if i%x == 0])
+print(d)
+
+Q. Python Program for Smallest K digit number divisible by X
+Sol. a = 9
+b = str(a)
+k = int(input())
+x = int(input())
+c = b*k
+e = int(c)
+f = 10**(k-1)
+d = min([i for i in range(f,e) if i%x == 0])
+print(d)
+
+Q. Check if a triangle of positive area is possible with the given angles
+Sol. a = int(input())
+b = int(input())
+c = int(input())
+if a > 0 and b > 0 and c > 0:
+    if a + b + c ==180:
+        if a + b >= c:
+            print("yes")
+        elif b + c >= a:
+            print("Yes")
+        elif c + a >= b:
+            print("yes")
+        else:
+            print("yes")
+    else:
+        print("No")
+else:
+
 Q. 
+    print("No")
 
