@@ -374,6 +374,6 @@ Sol. N = int(input())
 a = [x for x in range(0,N+1) if ((x*(x+1))//2) <= N]
 print(max(a))
 
-Q. 
+Q.  
         
 
